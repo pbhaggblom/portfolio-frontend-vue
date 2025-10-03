@@ -10,9 +10,9 @@ const response = ref('');
 const submitMessage = () => {
 
     const message = {
-        name: name,
-        email: email,
-        message: content
+        name: name.value,
+        email: email.value,
+        message: content.value
     }
 
     fetch("http://localhost:8080/submit-message", {
@@ -25,7 +25,8 @@ const submitMessage = () => {
     .then(res => {
         return res.text();
     })
-    .then(response => {
+    .then(res => {
+        response.value = res;
         console.log(response);
         
     }) 
@@ -34,7 +35,7 @@ const submitMessage = () => {
 </script>
 
 <template>
-    <form @submit.prevent="submitMessage">
+    <form @submit.prevent="submitMessage" id="form">
         <label for="name">Name: </label>
         <input type="text" name="name" id="name" v-model="name">
         <br>

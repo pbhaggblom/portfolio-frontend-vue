@@ -1,8 +1,4 @@
 <script setup>
-    import About from './About.vue';
-    import Projects from './Projects.vue';
-    import Contact from './Contact.vue';
-
     const emit = defineEmits(['update']);
 
     const setActive = (component) => {
