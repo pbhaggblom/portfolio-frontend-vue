@@ -1,10 +1,9 @@
 <script setup>
   import { ref } from "vue";
   import Header from "./components/Header.vue";
-  import About from "./components/About.vue";
   import Navbar from "./components/Navbar.vue";
 
-  const activeComponent = ref(About);
+  const activeComponent = ref('About');
 
   const getActive = (component) => {
     activeComponent.value = component;
