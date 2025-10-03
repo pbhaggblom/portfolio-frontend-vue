@@ -6,6 +6,7 @@ const name = ref('');
 const email = ref('');
 const content = ref('');
 const response = ref('');
+const status = ref('');
 
 const submitMessage = () => {
 
@@ -23,13 +24,19 @@ const submitMessage = () => {
         body: JSON.stringify(message)    
     })
     .then(res => {
+        if (res.status === 200) {
+            status.value = 'ok';
+            name.value = '';
+            email.value = '';
+            content.value = '';
+        } else {
+            status.value = 'error';
+        }
         return res.text();
     })
     .then(res => {
         response.value = res;
-        console.log(response);
-        
-    }) 
+    });
 }
 
 </script>
@@ -47,5 +54,16 @@ const submitMessage = () => {
         <br>
         <button type="submit" id="submit">Submit</button>    
     </form>
-    <p id="response"></p>    
+    <p class="response ok" v-if="status === 'ok'">{{ response }}</p>
+    <p class="response error" v-if="status === 'error'">{{ response }}</p>    
 </template>
+
+<style scoped>
+.ok {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+</style>
