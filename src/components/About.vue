@@ -5,8 +5,16 @@
 </script>
 
 <template>
-    <p>{{ about }}</p>
-    <ul v-for="skill in skills">
-        <li>{{ skill }}</li>
-    </ul>
+    <div id="about">
+        <div id="presentation">
+           <p id="about-p">{{ about }}</p> 
+        </div>
+        <div id="skills">
+            <ul v-for="skill in skills" id="skill-list">
+                <li>{{ skill }}</li>
+            </ul> 
+        </div>
+        
+    </div>
+    
 </template>
