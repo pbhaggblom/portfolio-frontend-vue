@@ -23,7 +23,9 @@
             <img :src="project.img">
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
-            <ul v-for="t in project.tech">{{ t }}</ul>
+            <ul v-for="t in project.tech">
+                <li>{{ t }}</li>
+            </ul>
             <a :href="project.url">Go to GitHub</a>
         </div>
     </div>
