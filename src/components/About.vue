@@ -1,5 +1,12 @@
-<script setup></script>
+<script setup>
+    const about = "Hello! My name is Pontus and I'm currently studying Java development at Nackademin. I graduating in 2026, and will be open to work in web and software development. Here are some of the fields I have experience in:";
+
+    const skills = ['Java', 'Spring Boot', 'SQL', 'Git/GitHub', 'HTML', 'CSS', 'Javascript', 'Vue.js'];
+</script>
 
 <template>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem obcaecati perspiciatis accusamus, error aliquid officiis quam dicta natus sapiente voluptatibus assumenda magni tenetur quaerat necessitatibus? Reiciendis deleniti aut voluptatum expedita autem quis blanditiis inventore, accusamus cupiditate nisi similique maiores quam tenetur. Commodi est veritatis officiis sunt magni neque dolor maiores in voluptas esse culpa quod aspernatur, incidunt tempora architecto id consectetur fugiat earum eligendi mollitia ab at expedita dolorem nostrum. In, modi maxime illo quae sit repudiandae sunt facilis veniam.</p>
+    <p>{{ about }}</p>
+    <ul v-for="skill in skills">
+        <li>{{ skill }}</li>
+    </ul>
 </template>
