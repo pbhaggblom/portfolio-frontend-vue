@@ -42,20 +42,25 @@ const submitMessage = () => {
 </script>
 
 <template>
-    <form @submit.prevent="submitMessage" id="form">
+    
+    <form @submit.prevent="submitMessage" id="form" class="pure-form">
         <label for="name">Name: </label>
+        <br>
         <input type="text" name="name" id="name" v-model="name">
         <br>
         <label for="email">Email: </label>
+        <br>
         <input type="text" name="email" id="email" v-model="email">
         <br>
         <label for="message">Message: </label>
+        <br>
         <textarea type="text" name="message" id="message" v-model="content"></textarea>
         <br>
         <button type="submit" id="submit">Submit</button>    
     </form>
-    <p class="response ok" v-if="status === 'ok'">{{ response }}</p>
-    <p class="response error" v-if="status === 'error'">{{ response }}</p>    
+    
+    <p :class="status" v-if="response !== ''">{{ response }}</p>
+   
 </template>
 
 <style scoped>

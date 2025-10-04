@@ -3,7 +3,7 @@
         {
             title: 'Portfolio frontend',
             description: 'The frontend part of this webpage. Written in Vue.js. The contact form sends messages to the backend application',
-            tech: ['HTML', 'CSS', 'Vue.js'],
+            tech: ['HTML', 'Pure.CSS', 'Vue.js'],
             img: '/images/vue.png',
             url: 'https://github.com/pbhaggblom/portfolio-frontend-vue'
         },
