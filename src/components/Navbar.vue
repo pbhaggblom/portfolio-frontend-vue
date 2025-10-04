@@ -1,16 +1,16 @@
 <script setup>
-    const emit = defineEmits(['update']);
+    const model = defineModel();
 
-    const setActive = (component) => {
-        emit('update', component)
+    const update = (component) => {
+        model.value = component;
     };
 
 </script>
 
 <template>
     <nav>
-        <button @click="setActive('About')">About</button>
-        <button @click="setActive('Projects')">Projects</button>
-        <button @click="setActive('Contact')">Contact</button>
+        <button @click="update('About')">About</button>
+        <button @click="update('Projects')">Projects</button>
+        <button @click="update('Contact')">Contact</button>
     </nav>
 </template>

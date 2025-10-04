@@ -5,16 +5,12 @@
 
   const activeComponent = ref('About');
 
-  const getActive = (component) => {
-    activeComponent.value = component;
-  }
-
 </script>
 
 <template>
   <Header />
-  <Navbar @update="getActive" />
-  <component v-bind:is="activeComponent"></component>
+  <Navbar v-model="activeComponent" />
+  <component :is="activeComponent"></component>
 </template>
 
 <style scoped></style>
