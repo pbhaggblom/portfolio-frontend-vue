@@ -3,18 +3,14 @@
   import Header from "./components/Header.vue";
   import Navbar from "./components/Navbar.vue";
 
-  const activeComponent = ref('About');
-
-  const getActive = (component) => {
-    activeComponent.value = component;
-  }
+  const currentSection = ref('About');
 
 </script>
 
 <template>
   <Header />
-  <Navbar @update="getActive" />
-  <component v-bind:is="activeComponent"></component>
+  <Navbar v-model="currentSection" />
+  <component :is="currentSection"></component>
 </template>
 
 <style scoped></style>
