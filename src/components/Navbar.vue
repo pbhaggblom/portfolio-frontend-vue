@@ -1,8 +1,8 @@
 <script setup>
     const model = defineModel();
 
-    const update = (component) => {
-        model.value = component;
+    const update = (section) => {
+        model.value = section;
     };
 
 </script>
