@@ -18,13 +18,15 @@
 </script>
 
 <template>
-    <div v-for="project in projects">
-        <div>
-            <img :src="project.img">
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
-            <ul v-for="t in project.tech">
-                <li>{{ t }}</li>
+    <div id="projects">
+        <div v-for="project in projects" class="project-card">
+            <div class="project-header">
+                <img :src="project.img">
+                <h3>{{ project.title }}</h3>
+            </div>
+            <p class="description">{{ project.description }}</p>
+            <ul class="tech">
+                <li v-for="t in project.tech">{{ t }}</li>
             </ul>
             <a :href="project.url">Go to GitHub</a>
         </div>

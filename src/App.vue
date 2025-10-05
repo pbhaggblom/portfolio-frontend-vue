@@ -9,7 +9,6 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <div class="m-5"></div>
   <Header />
   <Navbar v-model="currentSection" />
   <component :is="currentSection"></component>
