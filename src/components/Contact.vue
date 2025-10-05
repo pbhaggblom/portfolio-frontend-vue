@@ -42,28 +42,49 @@ const submitMessage = () => {
 </script>
 
 <template>
-    <form @submit.prevent="submitMessage" id="form">
-        <label for="name">Name: </label>
-        <input type="text" name="name" id="name" v-model="name">
-        <br>
-        <label for="email">Email: </label>
-        <input type="text" name="email" id="email" v-model="email">
-        <br>
-        <label for="message">Message: </label>
-        <textarea type="text" name="message" id="message" v-model="content"></textarea>
-        <br>
-        <button type="submit" id="submit">Submit</button>    
+    
+    <form @submit.prevent="submitMessage" id="form" class="pure-form pure-form-stacked">
+
+        <fieldset>
+
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" v-model="name">  
+ 
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="email" v-model="email">
+
+                <label for="message">Message: </label>
+                <textarea type="text" name="message" id="message" v-model="content"></textarea>
+                
+                <div id="center-submit">
+                    <button type="submit" id="submit" class="pure-button">Submit</button>
+                </div>
+                
+        </fieldset>
+
     </form>
-    <p class="response ok" v-if="status === 'ok'">{{ response }}</p>
-    <p class="response error" v-if="status === 'error'">{{ response }}</p>    
+    
+    <p :class="status" v-if="response !== ''">{{ response }}</p>
+   
 </template>
 
 <style scoped>
+p {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+    max-width: fit-content;
+    border-radius: 5px;
+}
+
 .ok {
-    color: green;
+    color: #fbf2d5;
 }
 
 .error {
-    color: red;
+    background-color: #fdc57b;
+    color: #fbf2d5;
 }
 </style>
