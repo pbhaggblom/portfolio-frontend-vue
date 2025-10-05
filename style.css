@@ -3,8 +3,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: 'open sans', 'Helvetica Neue', Helvetica, sans-serif;
-    margin-left: 5em;
-    margin-right: 5em;
     letter-spacing: 0.1em;
     background-color: #7fa99b;
     color: #fbf2d5;
@@ -39,7 +37,6 @@ footer {
 }
 
 nav {
-    margin-bottom: 3em;
     margin-top: 3em;
     display: flex;
     justify-content: center;
@@ -51,8 +48,10 @@ nav {
 }
 
 #presentation {
+    margin-top: 5em;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 3em;
     max-width: 800px;
 }
 
@@ -95,6 +94,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 2em;
 }
 
 .project-header {

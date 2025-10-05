@@ -55,15 +55,13 @@ const submitMessage = () => {
 
                 <label for="message">Message: </label>
                 <textarea type="text" name="message" id="message" v-model="content"></textarea>
+                
                 <div id="center-submit">
                     <button type="submit" id="submit" class="pure-button">Submit</button>
                 </div>
                 
-
         </fieldset>
 
-        
-            
     </form>
     
     <p :class="status" v-if="response !== ''">{{ response }}</p>
@@ -71,11 +69,22 @@ const submitMessage = () => {
 </template>
 
 <style scoped>
+p {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+    max-width: fit-content;
+    border-radius: 5px;
+}
+
 .ok {
-    color: green;
+    color: #fbf2d5;
 }
 
 .error {
-    color: red;
+    background-color: #fdc57b;
+    color: #fbf2d5;
 }
 </style>

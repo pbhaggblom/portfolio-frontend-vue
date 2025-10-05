@@ -18,8 +18,8 @@
 </template>
 
 <style scoped>
-.selected {
-    background-color: #fbf2d5;
-    color: #7fa99b;
-}
+    .selected {
+        background-color: #fbf2d5;
+        color: #7fa99b;
+    }
 </style>
