@@ -79,7 +79,16 @@ nav {
 }
 
 .nav-link {
-    margin: 0em 4em
+    margin: 0em 4em;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    color: #fbf2d5;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
 }
 
 #projects {

@@ -10,9 +10,16 @@
 <template>
     <nav>
 
-        <button @click="update('About')" class="nav-link">About</button>
-        <button @click="update('Projects')" class="nav-link">Projects</button>
-        <button @click="update('Contact')" class="nav-link">Contact</button>
+        <button @click="update('About')" class="nav-link" :class="{selected: model === 'About'}">About</button>
+        <button @click="update('Projects')" class="nav-link" :class="{selected: model === 'Projects'}">Projects</button>
+        <button @click="update('Contact')" class="nav-link" :class="{selected: model === 'Contact'}">Contact</button>
     
     </nav>
 </template>
+
+<style scoped>
+.selected {
+    background-color: #fbf2d5;
+    color: #7fa99b;
+}
+</style>
