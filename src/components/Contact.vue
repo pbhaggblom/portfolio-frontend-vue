@@ -16,7 +16,7 @@ const submitMessage = () => {
         message: content.value
     }
 
-    fetch("http://localhost:8080/submit-message", {
+    fetch("https://cv-webpage-backend-production.up.railway.app/submit-message", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
