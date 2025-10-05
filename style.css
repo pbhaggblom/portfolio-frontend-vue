@@ -75,7 +75,7 @@ nav {
 }
 
 #about-p {
-text-align: center;
+    text-align: center;
 }
 
 .nav-link {
@@ -118,4 +118,28 @@ a {
     text-align: center;
     color: #7fa99b;
     margin-top: 1em;
+}
+
+input, textarea , #submit {
+    background-color: #fbf2d5;
+    color: #7fa99b;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+}
+
+#center-submit {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+#submit {
+    border-radius: 5px;
 }

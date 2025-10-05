@@ -43,24 +43,23 @@ const submitMessage = () => {
 
 <template>
     
-    <form @submit.prevent="submitMessage" id="form" class="pure-form pure-form-aligned">
+    <form @submit.prevent="submitMessage" id="form" class="pure-form pure-form-stacked">
 
         <fieldset>
-            <div class="pure-control-group">
+
                 <label for="name">Name: </label>
                 <input type="text" name="name" id="name" v-model="name">  
-            </div>
-            <div class="pure-control-group">
+ 
                 <label for="email">Email: </label>
                 <input type="text" name="email" id="email" v-model="email">
-            </div>
-            <div class="pure-control-group">
+
                 <label for="message">Message: </label>
                 <textarea type="text" name="message" id="message" v-model="content"></textarea>
-            </div>
-            <div class="pure-controls">
-            <button type="submit" id="submit">Submit</button>
-            </div>
+                <div id="center-submit">
+                    <button type="submit" id="submit" class="pure-button">Submit</button>
+                </div>
+                
+
         </fieldset>
 
         
