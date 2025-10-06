@@ -1,4 +1,6 @@
 <script setup>
+    import ProjectCard from './ProjectCard.vue';
+
     const projects = [
         {
             title: 'Portfolio frontend',
@@ -19,16 +21,12 @@
 
 <template>
     <div id="projects">
-        <div v-for="project in projects" class="project-card">
-            <div class="project-header">
-                <img :src="project.img">
-                <h3>{{ project.title }}</h3>
-            </div>
-            <p class="description">{{ project.description }}</p>
-            <ul class="tech">
-                <li v-for="t in project.tech">{{ t }}</li>
-            </ul>
-            <a :href="project.url">Go to GitHub</a>
-        </div>
+        <ProjectCard v-for="project in projects" 
+        :title="project.title"
+        :description="project.description"
+        :tech="project.tech"
+        :img="project.img"
+        :url="project.url"
+        />
     </div>
 </template>
