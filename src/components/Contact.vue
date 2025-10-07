@@ -10,13 +10,15 @@ const status = ref('');
 
 const submitMessage = () => {
 
+    const apiUrl = import.meta.env.VITE_API_URL;
+
     const message = {
         name: name.value,
         email: email.value,
         message: content.value
     }
 
-    fetch("https://cv-webpage-backend-production.up.railway.app/submit-message", {
+    fetch(`${apiUrl}/submit-message`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
