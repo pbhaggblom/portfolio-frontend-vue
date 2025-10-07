@@ -20,13 +20,19 @@
 </script>
 
 <template>
-    <div id="projects">
-        <ProjectCard v-for="project in projects" 
-        :title="project.title"
-        :description="project.description"
-        :tech="project.tech"
-        :img="project.img"
-        :url="project.url"
-        />
+
+    <div class="section">
+        
+        <div id="projects">
+            <ProjectCard v-for="project in projects" 
+            :title="project.title"
+            :description="project.description"
+            :tech="project.tech"
+            :img="project.img"
+            :url="project.url"
+            />
+        </div>
+        
     </div>
+    
 </template>

@@ -18,7 +18,7 @@ const submitMessage = () => {
         message: content.value
     }
 
-    fetch(`http://localhost:8080/submit-message`, {
+    fetch(`${apiUrl}/submit-message`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -44,28 +44,33 @@ const submitMessage = () => {
 </script>
 
 <template>
-    
+
+    <div class="section">
+
     <form @submit.prevent="submitMessage" id="form" class="pure-form pure-form-stacked">
 
-        <fieldset>
+            <fieldset>
 
-                <label for="name">Name: </label>
-                <input type="text" name="name" id="name" v-model="name">  
- 
-                <label for="email">Email: </label>
-                <input type="text" name="email" id="email" v-model="email">
-
-                <label for="message">Message: </label>
-                <textarea type="text" name="message" id="message" v-model="content"></textarea>
-                
-                <div id="center-submit">
-                    <button type="submit" id="submit" class="pure-button">Submit</button>
-                </div>
-                
-        </fieldset>
-
-    </form>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" v-model="name">  
     
-    <p id="response" :class="status" v-if="response !== ''">{{ response }}</p>
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" id="email" v-model="email">
+
+                    <label for="message">Message: </label>
+                    <textarea type="text" name="message" id="message" v-model="content"></textarea>
+                    
+                    <div id="center-submit">
+                        <button type="submit" id="submit" class="pure-button">Submit</button>
+                    </div>
+                    
+            </fieldset>
+
+        </form>
+
+        <p id="response" :class="status" v-if="response !== ''">{{ response }}</p>
+
+    </div>
+
    
 </template>
