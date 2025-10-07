@@ -6,6 +6,8 @@
 
 <template>
 
+    <div class="section">
+
         <div id="presentation">
            <p id="about-p">{{ about }}</p> 
         </div>
@@ -16,5 +18,7 @@
                 </ul> 
             </div>
         </div>
+
+    </div> 
         
 </template>

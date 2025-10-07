@@ -1,11 +1,18 @@
 body {
     display: flex;
     flex-direction: column;
+    margin: 0;
     min-height: 100vh;
     font-family: 'open sans', 'Helvetica Neue', Helvetica, sans-serif;
     letter-spacing: 0.1em;
     background-color: #7fa99b;
     color: #fbf2d5;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -26,20 +33,33 @@ li {
     list-style: none;
 }
 
+header {
+    height: 80px;
+    flex-shrink: 0;
+}
+
 footer {
-    position: fixed;
+    height: 50px;
     font-size: small;
-    left: 0;
-    bottom: 0;
     width: 100%;
     text-align: center;
     letter-spacing: 0.2em;
+    flex-shrink: 0;
 }
 
 nav {
-    margin-top: 3em;
+    margin-top: 5em;
+    height: 30px;
     display: flex;
     justify-content: center;
+}
+
+.section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 30px;
 }
 
 .description {
@@ -48,7 +68,7 @@ nav {
 }
 
 #presentation {
-    margin-top: 5em;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3em;
@@ -151,4 +171,28 @@ textarea {
 
 #submit {
     border-radius: 5px;
+}
+
+.selected {
+    background-color: #fbf2d5;
+    color: #7fa99b;
+}
+
+#response {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+    max-width: fit-content;
+    border-radius: 5px;
+}
+
+.ok {
+    color: #fbf2d5;
+}
+
+.error {
+    background-color: #fdc57b;
+    color: #fbf2d5;
 }

@@ -5,7 +5,7 @@
         {
             title: 'Portfolio frontend',
             description: 'The frontend part of this webpage. Written in Vue.js. The contact form sends messages to the backend application',
-            tech: ['HTML', 'Pure.CSS', 'Vue.js'],
+            tech: ['HTML', 'CSS', 'Vue.js'],
             img: '/images/vue.png',
             url: 'https://github.com/pbhaggblom/portfolio-frontend-vue'
         },
@@ -20,13 +20,19 @@
 </script>
 
 <template>
-    <div id="projects">
-        <ProjectCard v-for="project in projects" 
-        :title="project.title"
-        :description="project.description"
-        :tech="project.tech"
-        :img="project.img"
-        :url="project.url"
-        />
+
+    <div class="section">
+        
+        <div id="projects">
+            <ProjectCard v-for="project in projects" 
+            :title="project.title"
+            :description="project.description"
+            :tech="project.tech"
+            :img="project.img"
+            :url="project.url"
+            />
+        </div>
+        
     </div>
+    
 </template>
