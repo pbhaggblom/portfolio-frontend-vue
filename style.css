@@ -152,3 +152,27 @@ textarea {
 #submit {
     border-radius: 5px;
 }
+
+.selected {
+    background-color: #fbf2d5;
+    color: #7fa99b;
+}
+
+#response {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+    max-width: fit-content;
+    border-radius: 5px;
+}
+
+.ok {
+    color: #fbf2d5;
+}
+
+.error {
+    background-color: #fdc57b;
+    color: #fbf2d5;
+}

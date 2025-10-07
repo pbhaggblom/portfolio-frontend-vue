@@ -18,7 +18,7 @@ const submitMessage = () => {
         message: content.value
     }
 
-    fetch(`${apiUrl}/submit-message`, {
+    fetch(`http://localhost:8080/submit-message`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -66,27 +66,6 @@ const submitMessage = () => {
 
     </form>
     
-    <p :class="status" v-if="response !== ''">{{ response }}</p>
+    <p id="response" :class="status" v-if="response !== ''">{{ response }}</p>
    
 </template>
-
-<style scoped>
-p {
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding: 10px;
-    max-width: fit-content;
-    border-radius: 5px;
-}
-
-.ok {
-    color: #fbf2d5;
-}
-
-.error {
-    background-color: #fdc57b;
-    color: #fbf2d5;
-}
-</style>
